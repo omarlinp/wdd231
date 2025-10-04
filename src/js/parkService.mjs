@@ -179,6 +179,8 @@ const park = {
   designation: "National Park"
 };
 
+
+
 export function getParkData() {
   return park;
 }
