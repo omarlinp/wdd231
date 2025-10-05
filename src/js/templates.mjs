@@ -8,11 +8,11 @@ export function mediaCardTemplate(info) {
    </div>`;
 }
 
-export function getMailingAddress(addresses) {
+function getMailingAddress(addresses) {
   const mailing = addresses.find((address) => address.type === "Mailing");
   return mailing;
 }
-export function getVoicePhone(numbers){
+function getVoicePhone(numbers){
   const voice = numbers.find((numbers) => numbers.type === "Voice");
   return voice;
 }
@@ -28,4 +28,12 @@ export function footerTemplate(info) {
   <h4>Phone:</h4>
   <p>${voice}</p>
   </section>`;
+}
+
+export function parkInfoTemplate(info) {
+  return `<a href="/" class="hero-banner__title">${info.name}</a>
+    <p class="hero-banner__subtitle">
+      <span>${info.designation}</span>
+      <span>${info.states}</span>
+    </p>`;
 }
